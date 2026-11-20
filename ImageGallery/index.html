@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Responsive image gallery with category filters and a lightbox viewer." />
+ <title>Irfan Ullah | Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Irfan's <span>Image Gallery</span></h1>
+    <p class="subtitle">Browse, filter and view photos in full screen.</p>
+    <nav id="filters" class="filters" aria-label="Filter images by category"></nav>
+    <p id="count" class="count" aria-live="polite"></p>
+  </header>
+
+  <main>
+    <section id="gallery" class="gallery" aria-label="Image gallery"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Designed & Developed by Irfan Ullah | CodeAlpha Frontend Internship</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <div class="lb-toolbar">
+      <span id="lb-counter" class="lb-counter"></span>
+      <div class="lb-actions">
+        <button id="lb-play" class="lb-btn" aria-label="Start slideshow" title="Slideshow (Space)">&#9654;</button>
+        <button id="lb-close" class="lb-btn" aria-label="Close viewer" title="Close (Esc)">&times;</button>
+      </div>
+    </div>
+
+    <button id="lb-prev" class="lb-nav lb-prev" aria-label="Previous image">&#10094;</button>
+
+    <figure class="lb-figure">
+      <div class="lb-stage">
+        <div id="lb-spinner" class="spinner" aria-hidden="true"></div>
+        <img id="lb-img" alt="" />
+      </div>
+      <figcaption>
+        <strong id="lb-title"></strong>
+        <span id="lb-cat" class="lb-cat"></span>
+      </figcaption>
+    </figure>
+
+    <button id="lb-next" class="lb-nav lb-next" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <script src="script (1).js"></script>
+</body>
+</html>
